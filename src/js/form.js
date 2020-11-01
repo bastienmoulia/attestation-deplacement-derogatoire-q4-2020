@@ -19,7 +19,10 @@ const getCurrentTime = () => {
 }
 
 const certificate = localStorage.getItem('certificate')
-const { profile } = JSON.parse(certificate)
+let profile = null
+if (certificate) {
+  profile = JSON.parse(certificate).profile
+}
 
 const createFormGroup = ({
   autocomplete = false,
@@ -65,7 +68,7 @@ const createFormGroup = ({
 
   if (name === 'heuresortie') {
     input.value = getCurrentTime()
-  } else {
+  } else if (profile && profile[input.name]) {
     input.value = profile[input.name]
   }
 

@@ -22,7 +22,9 @@ jobs:
     - uses: bahmutov/npm-install@v1
 
     - name: Build
-      run: PUBLIC_URL=https://bastienmoulia.github.io/attestation-deplacement-derogatoire-q4-2020 npm run build
+      run: npm run build:ci
+      env:
+        PUBLIC_URL: -/attestation-deplacement-derogatoire-q4-2020
 
     - name: Deploy
       if: success()

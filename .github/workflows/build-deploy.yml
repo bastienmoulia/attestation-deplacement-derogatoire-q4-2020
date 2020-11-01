@@ -23,8 +23,6 @@ jobs:
 
     - name: Build
       run: npm run build:ci
-      env:
-        PUBLIC_URL: -/attestation-deplacement-derogatoire-q4-2020
 
     - name: Deploy
       if: success()

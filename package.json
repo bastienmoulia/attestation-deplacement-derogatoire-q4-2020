@@ -46,6 +46,7 @@
     "eslint-plugin-standard": "^4.0.2",
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-pwa-manifest": "^3.0.10",
     "parcel-plugin-sw-cache": "^0.3.1",
     "postcss-current-selector": "0.0.3",
     "postcss-nested": "^4.2.3",
@@ -91,5 +92,21 @@
         "index.html"
       ]
     }
+  },
+  "pwaManifest": {
+    "name": "Générateur d'attestation de déplacement dérogatoire",
+    "short_name": "Déplacement covid-19",
+    "start_url": "https://bastienmoulia.github.io/attestation-deplacement-derogatoire-q4-2020/",
+    "description": "L'application officielle du gouvernement pour la génération d'attestation de déplacement dérogatoire dématérialisée.",
+    "categories": ["government", "health"],
+    "lang": "fr-FR",
+    "generateIconOptions": {
+      "baseIcon": "./src/favicons/favicon.svg",
+      "sizes": [192, 384, 512]
+    },
+    "orientation": "portrait-primary",
+    "theme_color": "#ced4da",
+    "background_color": "#000191",
+    "display": "minimal-ui"
   }
 }

@@ -129,6 +129,8 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
 
     console.log(getProfile(formInputs), reasons)
 
+    localStorage.setItem('certificate', JSON.stringify({ profile: getProfile(formInputs), reasons }))
+
     const pdfBlob = await generatePdf(getProfile(formInputs), reasons, pdfBase)
 
     const creationInstant = new Date()

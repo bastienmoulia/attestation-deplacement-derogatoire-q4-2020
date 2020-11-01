@@ -18,6 +18,9 @@ const getCurrentTime = () => {
   return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
 }
 
+const certificate = localStorage.getItem('certificate')
+const { profile } = JSON.parse(certificate)
+
 const createFormGroup = ({
   autocomplete = false,
   autofocus = false,
@@ -62,6 +65,8 @@ const createFormGroup = ({
 
   if (name === 'heuresortie') {
     input.value = getCurrentTime()
+  } else {
+    input.value = profile[input.name]
   }
 
   const validityAttrs = {

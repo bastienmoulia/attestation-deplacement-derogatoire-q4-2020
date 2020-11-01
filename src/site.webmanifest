@@ -1,6 +1,7 @@
 {
     "name": "Générateur d'attestation de déplacement dérogatoire",
     "short_name": "Déplacement covid-19",
+    "start_url": "https://bastienmoulia.github.io/attestation-deplacement-derogatoire-q4-2020/",
     "description": "L'application officielle du gouvernement pour la génération d'attestation de déplacement dérogatoire dématérialisée.",
     "categories": ["government", "health"],
     "lang": "fr-FR",
